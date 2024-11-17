@@ -1,0 +1,26 @@
+#contact {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+}
+
+#contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+#contact ul li {
+  margin: 10px 0;
+}
+
+#contact a {
+  color: #0077ff;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
