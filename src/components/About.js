@@ -6,7 +6,7 @@ function About() {
     <section id="about">
       <h2>Sobre mí</h2>
       <p>
-        Soy un/a desarrollador/a apasionado/a con experiencia en [tecnologías].
+        Soy un desarrollador apasionado con experiencia en React.
         Me encanta crear soluciones creativas y funcionales.
       </p>
     </section>

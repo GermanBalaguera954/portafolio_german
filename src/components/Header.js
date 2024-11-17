@@ -9,7 +9,7 @@ function Header() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <h1>¡Hola! Soy [Tu Nombre]</h1>
+      <h1>¡Hola! Soy German Balaguera</h1>
       <p>Desarrollador/a Frontend | React | JavaScript</p>
     </motion.header>
   );

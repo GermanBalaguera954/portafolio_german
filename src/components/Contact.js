@@ -8,16 +8,16 @@ function Contact() {
       <p>Puedes contactarme a través de:</p>
       <ul>
         <li>
-          Email: <a href="mailto:tuemail@example.com">tuemail@example.com</a>
+          Email: <a href="germanbalaguera954@gmail.com">germanbalaguera954@gmail.com</a>
         </li>
         <li>
           LinkedIn:{" "}
           <a
-            href="https://linkedin.com/in/tuperfil"
+            href="https://www.linkedin.com/in/germanbalaguera954/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Tu Perfil
+            https://www.linkedin.com/in/germanbalaguera954/
           </a>
         </li>
       </ul>
