@@ -1,19 +1,20 @@
-import React from "react";
-import "../styles/Header.css";
-import { motion } from 'framer-motion';
+import React from 'react';
+import '../styles/Header.css';
 
 function Header() {
   return (
-    <motion.header
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <h1>¡Hola! Soy German Balaguera</h1>
-      <p>Desarrollador/a Frontend | React | JavaScript</p>
-    </motion.header>
+    <header className="header">
+      <nav>
+        <p>Portafolio</p>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/about">Sobre mí</a></li>
+          <li><a href="/projects">Proyectos</a></li>
+          <li><a href="/contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
   );
 }
 
 export default Header;
-
