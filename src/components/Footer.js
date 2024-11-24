@@ -6,7 +6,7 @@ import { IoIosFolder } from "react-icons/io";
 function Footer() {
   return (
     <footer className="footer">
-      <p>© 2024 Mi Nombre | Todos los derechos reservados</p>
+      <p>© 2024 German Balaguera | Todos los derechos reservados</p>
 
       <div className="footer-links">
         <a href="/about">Sobre mí</a>
