@@ -5,13 +5,12 @@ function Home() {
   return (
     <>
       <h1 className="hero-title">
-        ¡Hola! Soy <span className="highlight-text">German Balaguera</span>
+        ¡Hola! Soy <br></br> <span className="highlight-text">GERMAN BALAGUERA</span>
       </h1>
       <p className="hero-paragraph">
         Desarrollador Frontend apasionado por crear interfaces modernas, intuitivas y funcionales.
       </p>
 
-      <h2>Mis Habilidades</h2>
       <div className="skills-container">
         {['Desarrollo Web', 'Diseño Responsivo', 'Optimización'].map((skill, index) => (
           <div className="skill-card" key={index}>

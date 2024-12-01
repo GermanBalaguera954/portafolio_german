@@ -1,22 +1,33 @@
 .hero-title {
   text-align: center;
-  font-size: 2.5rem;
-  margin-top: 2rem;
+  font-size: 2rem; /* Tamaño del texto */
+  margin-top: 1rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif; /* Fuente moderna */
+  text-shadow: 0 4px 4px rgb(0, 0, 0); /* Sombra ligera */
+}
+
+/* Estilo para el texto resaltado */
+.highlight-text {
+  display: inline-block; /* Para animaciones y efectos */
+  font-family: 'Poppins', sans-serif; /* Fuente moderna */
+  font-weight: 700; /* Mayor impacto visual */
+  font-size: 3rem; /* Tamaño del texto */
+  color: #010058d8; /* Color inicial */
+  cursor: pointer; /* Apunta a que es interactivo */
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.774); /* Sombra ligera */
+  
 }
 
 .hero-paragraph {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-top: 1rem;
   color: #fff;
+  padding: 0 1rem;
+  line-height: 1.6;
 }
 
-h2 {
-  text-align: center;
-  margin-top: 3rem;
-  font-size: 2rem;
-  color: #fff;
-}
 
 .skills-container {
   display: flex;
@@ -24,32 +35,45 @@ h2 {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .skill-card {
-  background-color: #2e5174;
+  background: linear-gradient(145deg, #3498db, #2e5174);
   color: #fff;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
   width: 280px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
+  background: linear-gradient(145deg, #2e5174, #3498db);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .skill-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
+  color: #f0f0f0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .skill-card p {
   font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
+/* Responsividad */
 @media (max-width: 768px) {
   .skills-container {
     flex-direction: column;

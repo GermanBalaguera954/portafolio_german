@@ -1,38 +1,26 @@
-/* Estilos globales para html y body */
 html,
 body {
-  height: 100%; /* Asegura que ocupen toda la altura del viewport */
-  margin: 0; /* Elimina los márgenes predeterminados */
-  display: flex; /* Define un contenedor flexible */
-  flex-direction: column; /* Los elementos hijos se organizan en columna */
-  background: linear-gradient(
-    45deg,
-    #34495e,
-    #2c3e50
-  ); /* Fondo con degradado en ángulo de 45 grados */
-  background-size: 400% 400%; /* Amplía el tamaño del fondo para crear efecto animado */
-  font-family: "Roboto", sans-serif; /* Aplica la fuente Roboto */
-  animation: gradientBG 10s ease infinite; /* Anima el fondo con el keyframe definido */
-  overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: url("/public/assets/fondo.jpg") no-repeat center center fixed;
+  background-size: cover; /* Hace que la imagen cubra todo el fondo */
+  background-color: rgba(
+    177,
+    169,
+    169,
+    1
+  ); /* Capa semitransparente (negro con 50% de opacidad) */
+  background-blend-mode: overlay; /* Combina la imagen con el color */
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
-/* Estilo para ocultar la barra de desplazamiento en Chrome/Safari */
+/* Ocultar barra de desplazamiento */
 root::-webkit-scrollbar {
-  width: 0; /* Oculta visualmente la barra de scroll */
-  background: transparent; /* Hace que el fondo del scrollbar sea transparente */
-}
-
-/* Keyframes para animación del fondo */
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%; /* Inicio: posición inicial del degradado */
-  }
-  50% {
-    background-position: 100% 50%; /* A mitad: el degradado se mueve completamente a la derecha */
-  }
-  100% {
-    background-position: 0% 50%; /* Fin: vuelve a la posición inicial */
-  }
+  width: 0;
+  background: transparent;
 }
 
 /* Estilos para el contenedor principal */
@@ -42,65 +30,75 @@ root::-webkit-scrollbar {
   min-height: 100%; /* Asegura que el contenedor ocupe al menos toda la altura del viewport */
   overflow-x: hidden; /* Evita el desbordamiento horizontal */
   scrollbar-width: none; /* Oculta el scroll en Firefox */
+  background: rgba(0, 0, 0, 0.2); /* Fondo con transparencia */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para el contenido principal */
+/* Contenedor principal */
 .main-content {
-  flex: 1; /* Ocupa el espacio disponible restante */
-  display: flex; /* Define un contenedor flexible */
-  flex-direction: column; /* Los elementos hijos se organizan en columna */
-  justify-content: center; /* Centra el contenido verticalmente */
-  align-items: center; /* Centra el contenido horizontalmente */
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  box-sizing: border-box; /* Incluye padding y border dentro del ancho */
-  margin-top: 6rem; /* Agrega espacio superior igual a la altura de un header (si existe) */
-  padding-bottom: 2rem; /* Agrega espacio inferior */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6rem;
+  padding-bottom: 2rem;
+}
+/* Footer general */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(46, 81, 116, 0.5);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
 }
 
-/* Estilos para el footer */
-footer {
-  /* background: #2e5174; Color de fondo del footer */
-  color: #fff; /* Color del texto */
-  text-align: center; /* Centra el texto */
-  border-top: 3px solid #3498db; /* Línea superior decorativa */
-  width: 100%; /* Asegura que el footer ocupe todo el ancho */
-  box-sizing: border-box; /* Incluye padding y border dentro del ancho */
-}
-
-/* Estilos para los enlaces del footer */
-.footer .footer-links {
-}
-
-.footer .footer-links a {
-  color: #fff; /* Color del texto de los enlaces */
-  font-size: 1.5rem; /* Tamaño del texto */
-  margin: 10px; /* Espaciado entre enlaces */
-  text-decoration: none; /* Elimina el subrayado */
-  transition: color 0.3s ease; /* Efecto suave al cambiar el color */
-}
-
-.footer .footer-links a:hover {
-  color: #3498db; /* Cambia el color al pasar el mouse */
-}
-
-.footer .social-icons a {
-  color: #fff; /* Color inicial de los íconos */
-  font-size: 1.8rem; /* Tamaño de los íconos */
-  margin: 0 5px; /* Espaciado horizontal entre íconos */
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease; /* Efecto de transformación y cambio de color */
-}
-
-.footer .social-icons a:hover {
-  transform: scale(1.2); /* Aumenta el tamaño ligeramente al pasar el mouse */
-  color: #3498db; /* Cambia el color al pasar el mouse */
-}
-
+/* Texto del footer */
 .footer p {
-  font-size: 1.4rem; /* Tamaño del texto */
+  font-size: 15px;
+  margin-bottom: 0.1rem;
 }
 
-.footer .social-icons a {
-  display: inline-block; /* Hace que los íconos sean bloques en línea */
+/* Enlaces del footer */
+.footer-links {
+  margin: 0.5rem 0 1rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  font-size: 15px;
+  margin: 0 5px;
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00cec9;
+  transform: scale(1.1);
+}
+
+/* Íconos sociales */
+.social-icons {
+  display: flex;
+  gap: 9px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1rem;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00cec9;
+  transform: scale(1.2);
 }

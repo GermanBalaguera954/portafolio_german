@@ -2,13 +2,14 @@
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: #2e5174;
+  background: rgba(46, 81, 116, 1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 50px; /* Mantén esta altura para referencia */
+  z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
 }
 
 .logo {
