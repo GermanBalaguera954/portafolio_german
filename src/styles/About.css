@@ -9,7 +9,7 @@
   margin: 0 auto;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Mantener el sombreado sin fondo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
 }
 
@@ -37,4 +37,30 @@
 
 .about-call-to-action:hover {
   text-decoration: underline;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1rem; /* Reducir padding en pantallas pequeñas */
+    max-width: 100%; /* Ancho completo */
+    margin-top: 15rem;
+  }
+
+  .about-title {
+    font-size: 1.5rem; /* Reducir tamaño de fuente del título */
+  }
+
+  .about-content p {
+    font-size: 1rem; /* Reducir tamaño de fuente del párrafo */
+    padding: 0 1rem; /* Añadir padding para no pegarse a los bordes */
+  }
+
+  .about-header {
+    margin-bottom: 1rem; /* Reducir margen inferior */
+  }
+
+  .about-call-to-action {
+    font-size: 1.1rem; /* Ajustar tamaño de la fuente */
+  }
 }

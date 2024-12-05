@@ -45,6 +45,7 @@ root::-webkit-scrollbar {
   box-sizing: border-box;
   margin-top: 6rem;
   padding-bottom: 2rem;
+  z-index: 1;
 }
 /* Footer general */
 .footer {
@@ -101,4 +102,61 @@ root::-webkit-scrollbar {
 .social-icons a:hover {
   color: #00cec9;
   transform: scale(1.2);
+}
+
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+  html, body {
+    background-size: auto; /* Ajusta el fondo para pantallas pequeñas */
+    background-position: center top;
+  }
+
+  .main-content {
+    margin-top: 3rem; /* Reduce el espacio superior */
+    padding-bottom: 1rem; /* Menos espacio en la parte inferior */
+  }
+
+  /* Ajustes de los textos */
+  .footer p {
+    font-size: 13px; /* Reduce el tamaño del texto del footer */
+  }
+
+  .footer-links a {
+    font-size: 14px; /* Reduce el tamaño de los enlaces */
+  }
+
+  .social-icons a {
+    font-size: 1rem; /* Mantén el tamaño de los íconos */
+  }
+
+  /* Ajustes para los íconos sociales */
+  .social-icons {
+    gap: 5px; /* Menos espacio entre íconos */
+  }
+
+  /* Hacer que los enlaces en el footer se apilen en dispositivos pequeños */
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin: 5px 0; /* Espaciado ajustado entre enlaces */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer p {
+    font-size: 12px; /* Texto aún más pequeño para pantallas muy pequeñas */
+  }
+
+  .footer-links a {
+    font-size: 12px; /* Tamaño de los enlaces más pequeño */
+  }
+
+  .social-icons a {
+    font-size: 0.9rem; /* Reducir íconos para pantallas muy pequeñas */
+  }
 }

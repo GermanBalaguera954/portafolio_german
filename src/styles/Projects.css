@@ -78,20 +78,66 @@ height: 100%;
   background-color: #3c7a4a;
 }
 
-@media (max-width: 768px) {
-  .projects-title {
-    font-size: 2rem;
-  }
+/* Media Queries para hacer el diseño responsive */
 
-  .project-item {
+/* Para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  .projects-section {
     padding: 1rem;
   }
 
+  .project-list {
+    padding: 0 2rem;
+  }
+
+  .project-item {
+    width: 90%; /* Hacer las tarjetas más anchas en móviles */
+  }
+
+  .project-image {
+    width: 100%; /* Las imágenes ocuparán el 100% del ancho */
+    margin-top: 1rem;
+  }
+
   .project-name {
-    font-size: 1.3rem;
+    font-size: 1.25rem; /* Reducir el tamaño de la fuente */
   }
 
   .project-description {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
   }
 }
+
+/* Para pantallas aún más pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 0.5rem; /* Reducir el padding en pantallas muy pequeñas */
+  }
+
+  .project-list {
+    padding: 0 1rem; /* Menos espacio en los laterales */
+  }
+
+  .project-item {
+    width: 100%; /* Las tarjetas ocuparán todo el ancho en pantallas de 480px */
+  }
+
+  .project-image {
+    width: 100%; /* Las imágenes seguirán ocupando todo el ancho */
+    margin-top: 0.8rem; /* Reducir el margen superior */
+  }
+
+  .project-name {
+    font-size: 1.1rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+  }
+
+  .project-description {
+    font-size: 0.8rem; /* Reducir aún más el tamaño de la fuente */
+  }
+
+  .project-link {
+    font-size: 0.9rem; /* Hacer el tamaño de la fuente del enlace más pequeño */
+    padding: 0.4rem 0.8rem; /* Reducir el tamaño del botón */
+  }
+}
+

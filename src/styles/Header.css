@@ -1,6 +1,7 @@
 .custom-header {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Espacia logo y links */
   padding: 0.5rem 1rem;
   background: rgba(46, 81, 116, 1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -8,12 +9,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px; /* Mantén esta altura para referencia */
-  z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+  height: 50px; /* Altura fija */
+  z-index: 1000;
 }
 
 .logo {
-  flex: 1;
+  flex: 0 0 auto;
 }
 
 .logo-image {
@@ -26,9 +27,8 @@
 }
 
 .header-links {
-  padding: 3rem;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -37,11 +37,8 @@
   align-items: center;
   color: #fff;
   text-decoration: none;
-  /* font-size: 1.2rem; */
   font-weight: 500;
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   position: relative;
 }
 
@@ -52,4 +49,60 @@
 .header-link:hover {
   color: #3498db;
   transform: translateY(-3px);
+}
+
+/* ESTILO RESPONSIVO */
+@media (max-width: 768px) {
+  .custom-header {
+    flex-wrap: wrap; /* Permite que los elementos salten de línea */
+    height: auto; /* Altura dinámica */
+    padding: 1rem;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    text-align: center; /* Alinea el contenido al centro */
+  }
+
+  .logo {
+    display: flex; /* Asegura que el logo siga siendo un elemento flexible */
+    justify-content: center; /* Centra horizontalmente el logo */
+    width: 100%; /* Ocupa todo el ancho para facilitar el centrado */
+    margin-bottom: 1rem; /* Espaciado inferior para separar el logo de los enlaces */
+  }
+
+  .header-links {
+    flex-direction: column; /* Cambia a columna */
+    width: 100%; /* Ocupa todo el ancho */
+    gap: 0.5rem; /* Espaciado reducido */
+  }
+
+  .header-link {
+    font-size: 1rem; /* Tamaño de texto más pequeño */
+    padding: 0.5rem 0; /* Espaciado adicional */
+    text-align: center; /* Centra los textos de los enlaces */
+  }
+
+  .logo-image {
+    width: 30px; /* Logo más pequeño */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .custom-header {
+    flex-direction: column; /* Apila logo y enlaces */
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-links {
+    gap: 0.5rem;
+    align-items: center; /* Centra los enlaces */
+  }
+
+  .header-link {
+    font-size: 0.9rem; /* Texto aún más compacto */
+  }
+
+  .logo-image {
+    width: 30px; /* Logo más pequeño */
+  }
 }
